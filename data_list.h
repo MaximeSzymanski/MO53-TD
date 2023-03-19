@@ -4,28 +4,30 @@
 
 #include <vector>
 #include <string>
+#include <memory>
+using namespace std;
 
 class list_element {
     double _value;
-    list_element *_prev;
-    list_element *_next;
+    shared_ptr<list_element> _prev;
+    shared_ptr<list_element> _next;
 
 public:
-    list_element(double v=0.0, list_element *p=nullptr, list_element *n=nullptr):
+    list_element(double v=0.0, shared_ptr<list_element> p={nullptr}, shared_ptr<list_element> n={nullptr}):
         _value(v), _prev(p), _next(n) {}
     ~list_element() {}
 
-    list_element *get_next() {return _next;}
-    void set_next(list_element *n) {_next = n;}
-    list_element *get_prev() {return _prev;}
-    void set_prev(list_element *n) {_prev = n;}
+    shared_ptr<list_element> get_next() {return _next;}
+    void set_next(shared_ptr<list_element> n) {_next = n;}
+    shared_ptr<list_element> get_prev() {return _prev;}
+    void set_prev(shared_ptr<list_element> n) {_prev = n;}
     double get_value()const {return _value;}
     void set_value(double v) {_value = v;}
 };
 
 class values_list {
-    list_element *_head;
-    list_element *_tail;
+    shared_ptr<list_element> _head;
+    shared_ptr<list_element> _tail;
 
 public:
     values_list(): _head(nullptr), _tail(nullptr) {}

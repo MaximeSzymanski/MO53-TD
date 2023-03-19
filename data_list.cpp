@@ -15,7 +15,7 @@ data_list::data_list(const data_list &other) {
 }
 
 values_list::values_list(const values_list &other) {
-    shared_ptr<list_element> ptr = other._head;
+    shared_ptr<list_element> ptr(other._head);
     while (ptr) {
         add_value(ptr->get_value());
         ptr = ptr->get_next();
@@ -38,7 +38,7 @@ void values_list::clear_list() {
         _head = tmp->get_next();
         tmp = _head;
     }
-    _head = _tail = {};
+    _head = _tail = make_shared<list_element>();
 }
 
 void values_list::add_value(double v) {
@@ -56,7 +56,7 @@ void values_list::pop_element() {
         shared_ptr<list_element> tmp = _head->get_next();
         _head = tmp;
         if (tmp) {
-            tmp->set_prev(shared_ptr<list_element>(nullptr));
+            tmp->set_prev(make_shared<list_element>());
         } else {
             _tail = _head; // both =nullptr
         }

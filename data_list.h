@@ -5,6 +5,7 @@
 #include <vector>
 #include <string>
 #include <memory>
+#include <iostream>
 using namespace std;
 
 class list_element {
@@ -30,7 +31,7 @@ class values_list {
     shared_ptr<list_element> _tail;
 
 public:
-    values_list(): _head(nullptr), _tail(nullptr) {}
+    values_list(): _head(make_shared<list_element>()), _tail(make_shared<list_element>()) {}
     values_list(const values_list &other);
     ~values_list() {clear_list();}
     values_list &operator=(const values_list &other);

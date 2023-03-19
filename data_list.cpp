@@ -56,7 +56,7 @@ void values_list::pop_element() {
         shared_ptr<list_element> tmp = _head->get_next();
         _head = tmp;
         if (tmp) {
-            tmp->set_prev(make_shared<list_element>());
+            tmp->set_prev({});
         } else {
             _tail = _head; // both =nullptr
         }

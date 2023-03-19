@@ -10,18 +10,18 @@ using namespace std;
 
 class list_element {
     double _value;
-    shared_ptr<list_element> _prev;
+    weak_ptr<list_element> _prev;
     shared_ptr<list_element> _next;
 
 public:
-    list_element(double v=0.0, shared_ptr<list_element> p={nullptr}, shared_ptr<list_element> n={nullptr}):
+    list_element(double v=0.0, weak_ptr<list_element> p={}, shared_ptr<list_element> n={}):
         _value(v), _prev(p), _next(n) {}
     ~list_element() {}
 
     shared_ptr<list_element> get_next() {return _next;}
     void set_next(shared_ptr<list_element> n) {_next = n;}
-    shared_ptr<list_element> get_prev() {return _prev;}
-    void set_prev(shared_ptr<list_element> n) {_prev = n;}
+    weak_ptr<list_element> get_prev() {return _prev;}
+    void set_prev(weak_ptr<list_element> n) {_prev = n;}
     double get_value()const {return _value;}
     void set_value(double v) {_value = v;}
 };

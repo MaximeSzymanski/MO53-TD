@@ -8,21 +8,61 @@
 #include <iostream>
 using namespace std;
 
+/**
+ * Class that represents an element of values_list that stores a double
+ * @see values_list 
+ */
 class list_element {
+    /**
+     * value of the double that is stored within the element
+    */
     double _value;
+    /**
+     * previous element of the list
+    */
     weak_ptr<list_element> _prev;
+    /**
+     * next element of the list
+    */
     shared_ptr<list_element> _next;
 
 public:
+    /**
+     * Constructor of the class
+     * @param v double asigned to the element
+     * @param p previous element of the list
+     * @param n next element of the list
+    */
     list_element(double v=0.0, weak_ptr<list_element> p={}, shared_ptr<list_element> n={}):
         _value(v), _prev(p), _next(n) {}
+    /**
+     * Destructor of the list element
+    */
     ~list_element() {}
 
+    /**
+     * @return the next element of the list
+    */
     shared_ptr<list_element> get_next() {return _next;}
+    /**
+     * @param n the next element of the list
+    */
     void set_next(shared_ptr<list_element> n) {_next = n;}
+    /**
+     * @return the previous element of the list
+    */
     weak_ptr<list_element> get_prev() {return _prev;}
+    /**
+     * @param n the previous element of the list
+    */
     void set_prev(weak_ptr<list_element> n) {_prev = n;}
+    /**
+     * @return the double value of the element
+    */
     double get_value()const {return _value;}
+    /**
+     * @param the double value of the element
+    */
     void set_value(double v) {_value = v;}
 };
 

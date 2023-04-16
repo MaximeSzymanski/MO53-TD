@@ -4,6 +4,7 @@
 #include "storage_type.h"
 #include "loader.h"
 #include <string>
+
 using namespace std; 
 
 class bin_loader: public loader {

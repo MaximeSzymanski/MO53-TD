@@ -1,6 +1,8 @@
 #include <iostream>
-#include "data_table.h"
-#include "data_list.h"
+#include "vector.h"
+#include "text_loader.h"
+#include "loader.h"
+#include <memory>
 
 using namespace std;
 
@@ -9,13 +11,9 @@ using namespace std;
  * This code is not final
 */
 int main() {
-    data_list t;
-    t.from_binary("binary.bin");
-    cout << "t:" << endl;
-    t.print_data();
-    //auto t2 = t.sort_table(false);
-    auto t2 = t.moving_average(2);
-    cout << "t2:" << endl;
-    t2.print_data();
+    shared_ptr<loader> l = make_shared<text_loader>(text_loader());
+    shared_ptr<storage_type> s = make_shared<vector>(vector());
+    l->write(*s, "texte.txt");
+
     return 0;
 }

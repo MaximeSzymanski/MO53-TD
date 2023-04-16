@@ -3,7 +3,7 @@
 
 class storage_type {
     public:
-    
+        // Coplien form functions
         storage_type() {}
         storage_type(const storage_type& storage) {}
         storage_type& operator=(const storage_type storage) {return *this;}

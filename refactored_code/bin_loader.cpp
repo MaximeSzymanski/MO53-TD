@@ -1,4 +1,4 @@
-#include "text_loader.h"
+#include "bin_loader.h"
 #include "storage_type.h"
 #include <string>
 #include <fstream>
@@ -7,18 +7,18 @@
 
 using namespace std; 
 
-storage_type& text_loader::write(storage_type& storage, const std::string source) {
+storage_type& bin_loader::write(storage_type& storage, const std::string source) {
     storage_type& returned_storage{storage};
-    ifstream f{source};
+    ifstream f{source, std::ios::binary};
     
     if (!f.is_open()) {
         throw ios_base::failure("File cannot be opened for reading.");
 
     }
 
-    array<char, 100> buffer;
-    while (f.getline(&buffer[0], 100)) {
-        returned_storage.add_element(stold(string{buffer.data()}));
+    double buffer;
+    while (f.read(reinterpret_cast<char *>(&buffer), sizeof(double))) {
+        returned_storage.add_element(buffer);
     }
 
     return returned_storage;

@@ -7,10 +7,7 @@ using namespace std;
 
 class loader {
     public:
-    
         loader() {};
-        loader(const loader& vector) {};
-        loader& operator=(const loader& loader) {return *this;};
         virtual ~loader() {};
 
         /**
@@ -20,7 +17,7 @@ class loader {
          * @throws ios_base::failure if source can not be opened
          * @return storage with the values of the source file
         */
-        virtual storage_type& write(storage_type& storage, std::string source) = 0;
+        virtual storage_type& write(storage_type& storage, const std::string source) = 0;
 
 };
 

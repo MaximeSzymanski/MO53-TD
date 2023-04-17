@@ -7,7 +7,7 @@
 
 using namespace std; 
 
-storage_type& bin_loader::write(storage_type& storage, const std::string source) {
+storage_type& bin_loader::load(storage_type& storage, const std::string source) {
     storage_type& returned_storage{storage};
     ifstream f{source, std::ios::binary};
     

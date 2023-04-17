@@ -7,7 +7,7 @@
 
 using namespace std; 
 
-storage_type& text_loader::write(storage_type& storage, const std::string source) {
+storage_type& text_loader::load(storage_type& storage, const std::string source) {
     storage_type& returned_storage{storage};
     ifstream f{source};
     

@@ -14,7 +14,7 @@ using namespace std;
 int main() {
     shared_ptr<loader> l = make_shared<bin_loader>(bin_loader());
     shared_ptr<storage_type> s = make_shared<vector>(vector());
-    l->write(*s, "binary.bin");
+    l->load(*s, "binary.bin");
 
     return 0;
 }

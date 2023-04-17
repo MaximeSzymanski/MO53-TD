@@ -1,24 +1,32 @@
-#ifndef LOADER_H
-#define LOADER_H
+#ifndef PROCESS_H
+#define PROCESS_H
 
 #include "storage_type.h"
 #include <string>
+#include "bin_loader.h"
+#include <memory>
+#include "loader.h"
+#include "writer.h"
+#include "vector.h"
+#include "screen_writer.h"
+
 using namespace std; 
 
-class loader {
-    public:
-        loader() {};
-        virtual ~loader() {};
+class process {
+    private:
+        shared_ptr<loader> _loader;
+        shared_ptr<storage_type> _storage;
+        shared_ptr<writer> _writer;
 
-        /**
-         * Pure virtual function that returns a copy of storage with the double values contained in the source file
-         * @param storage storage that will store the values of source
-         * @param source path to the source file containg double values
-         * @return storage with the values of the source file
-        */
-        virtual storage_type& load(storage_type& storage, const std::string source) = 0;
+    public:
+        process(): _loader(make_shared<bin_loader>(bin_loader())), _storage(make_shared<vector>(vector())), _writer(make_shared<screen_writer>(screen_writer())) {};
+        virtual ~process() {};
+        virtual void execute();
+
+    private: 
+        virtual void choose_how_to_process();
 
 };
 
 
-#endif // LOADER_H
+#endif // PROCESS_H

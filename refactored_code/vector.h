@@ -18,9 +18,14 @@ class vector: public storage_type {
 
         virtual void add_element(double d) {
             l.push_back(d);
-            std::cout << d << "\n";
         };
+        virtual double get_element(int position) {
+            list<double>::iterator it = l.begin();
+            advance(it, position);
+            return *it;
+        }
         virtual void clear_elements() {l.clear();};
+        virtual int size() { return l.size(); };
 
 };
 

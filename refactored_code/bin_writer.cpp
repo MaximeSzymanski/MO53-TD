@@ -14,7 +14,7 @@ bin_writer& bin_writer::operator=(const bin_writer& p_text_writer) {
 void bin_writer::write(storage_type& storage) {
     ofstream f{destination};
     if(!f.is_open()) {
-        cout << "File cannot be opened for writing." << endl;
+        throw write_exception("File cannot be opened for writing.");
     }
 
     for (size_t i=0; i<storage.size(); ++i) {

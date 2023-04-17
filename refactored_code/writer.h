@@ -3,7 +3,16 @@
 
 #include "storage_type.h"
 #include <string>
+
+#include <string>
+
 using namespace std; 
+
+
+struct write_exception: public runtime_error
+{
+    write_exception(const string &message): runtime_error(message) {}
+};
 
 class writer {
     public:

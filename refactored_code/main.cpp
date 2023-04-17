@@ -6,6 +6,7 @@
 #include <memory>
 #include "writer.h"
 #include "screen_writer.h"
+#include "text_writer.h"
 
 using namespace std;
 
@@ -16,7 +17,7 @@ using namespace std;
 int main() {
     shared_ptr<loader> l(new bin_loader());
     shared_ptr<storage_type> s(new vector());
-    shared_ptr<writer> w = make_shared<screen_writer>(screen_writer());
+    shared_ptr<writer> w = make_shared<text_writer>(text_writer("destination.txt"));
     storage_type& ref = l->load(*s, "binary.bin");
     w->write(ref);
 

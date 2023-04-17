@@ -4,6 +4,8 @@
 #include "bin_loader.h"
 #include "loader.h"
 #include <memory>
+#include "writer.h"
+#include "screen_writer.h"
 
 using namespace std;
 
@@ -12,9 +14,11 @@ using namespace std;
  * This code is not final
 */
 int main() {
-    shared_ptr<loader> l = make_shared<bin_loader>(bin_loader());
-    shared_ptr<storage_type> s = make_shared<vector>(vector());
-    l->load(*s, "binary.bin");
+    shared_ptr<loader> l(new bin_loader());
+    shared_ptr<storage_type> s(new vector());
+    shared_ptr<writer> w = make_shared<screen_writer>(screen_writer());
+    storage_type& ref = l->load(*s, "binary.bin");
+    w->write(ref);
 
     return 0;
 }

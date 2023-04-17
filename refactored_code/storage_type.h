@@ -6,11 +6,13 @@ class storage_type {
         // Coplien form functions
         storage_type() {}
         storage_type(const storage_type& storage) {}
-        storage_type& operator=(const storage_type storage) {return *this;}
+        storage_type& operator=(const storage_type& storage) {return *this;}
         virtual ~storage_type() {}
 
-        virtual void add_element(double d) {};
-        virtual void clear_elements() {};
+        virtual void add_element(double d) = 0;
+        virtual double get_element(int position) = 0;
+        virtual void clear_elements() = 0;
+        virtual int size() = 0;
     };
 
 

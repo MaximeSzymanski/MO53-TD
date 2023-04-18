@@ -1,9 +1,9 @@
 var indexSectionsWithContent =
 {
-  0: "dglrstv~",
-  1: "dlv",
-  2: "gls~",
-  3: "rt"
+  0: "belopstvw~",
+  1: "blpstvw",
+  2: "belopstw~",
+  3: "s"
 };
 
 var indexSectionNames =
@@ -11,7 +11,7 @@ var indexSectionNames =
   0: "all",
   1: "classes",
   2: "functions",
-  3: "pages"
+  3: "variables"
 };
 
 var indexSectionLabels =
@@ -19,6 +19,6 @@ var indexSectionLabels =
   0: "All",
   1: "Classes",
   2: "Functions",
-  3: "Pages"
+  3: "Variables"
 };
 

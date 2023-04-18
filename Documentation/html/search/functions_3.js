@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7elist_5felement_24',['~list_element',['../classlist__element.html#a3cf691d87a11e0e82a92bc7018fffe10',1,'list_element']]]
+  ['operator_3d_40',['operator=',['../classbin__writer.html#ad44b3bf1b3223e7f6ba1c53d24a406b5',1,'bin_writer::operator=()'],['../classtext__writer.html#a04cc57ae591d24612152876f4e9955ef',1,'text_writer::operator=()']]]
 ];

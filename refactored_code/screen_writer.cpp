@@ -5,6 +5,7 @@
 using namespace std; 
 
 void screen_writer::write(storage_type& storage) {
+    // Print in the console the data of storage
     for (size_t i=0; i< storage.size(); ++i) {
         cout << storage.get_element(i) << endl;
     }

@@ -12,12 +12,14 @@ bin_writer& bin_writer::operator=(const bin_writer& p_text_writer) {
 }
 
 void bin_writer::write(storage_type& storage) {
-    ofstream f{destination};
+    // open the destination file
+    ofstream f{destination, std::ios::binary};
     if(!f.is_open()) {
         throw write_exception("File cannot be opened for writing.");
     }
-
+    // Write into f in a binary format the data stored in storage 
     for (size_t i=0; i<storage.size(); ++i) {
-        f << storage.get_element(i) << endl;
+        const double &value = storage.get_element(i);
+        f.write(reinterpret_cast<const char *>(&value), sizeof(double));
     }
 }

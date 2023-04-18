@@ -34,7 +34,7 @@ class loader {
         virtual ~loader() {};
 
         /**
-         * Pure virtual function that returns a copy of {@code storage] with the double values contained in the source file
+         * Pure virtual function that returns a copy of {@code storage} with the double values contained in the source file
          * Use this {@link #loader(const string&) loader constructor} to set the path to the source file
          * @param storage a copy of storage is returned with the values stored in the source file
          * @throws ios_base::failure if source can not be opened

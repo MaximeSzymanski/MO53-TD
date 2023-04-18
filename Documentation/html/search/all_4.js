@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['set_5fnext_7',['set_next',['../classlist__element.html#a702c13b71132d40028457719578d4791',1,'list_element']]],
-  ['set_5fprev_8',['set_prev',['../classlist__element.html#a253033e48907c555df2293c81da1dda2',1,'list_element']]],
-  ['set_5fvalue_9',['set_value',['../classlist__element.html#af5da8a5c17781d07ff9411c4878d7b76',1,'list_element']]]
+  ['text_5floader_8',['text_loader',['../classtext__loader.html',1,'text_loader'],['../classtext__loader.html#aca5a708cc49e428a8301c136b2dcd559',1,'text_loader::text_loader()'],['../classtext__loader.html#af95de8e22f5c947f091da49bc3bd2702',1,'text_loader::text_loader(const string &amp;s)']]],
+  ['text_5fwriter_9',['text_writer',['../classtext__writer.html',1,'']]]
 ];

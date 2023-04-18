@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['_7elist_5felement_24',['~list_element',['../classlist__element.html#a3cf691d87a11e0e82a92bc7018fffe10',1,'list_element']]]
+  ['_7ebin_5floader_31',['~bin_loader',['../classbin__loader.html#ac4f1ff1fd72a90e1c74cbfdd6b8af35f',1,'bin_loader']]],
+  ['_7eloader_32',['~loader',['../classloader.html#a3c97c3c48fcc1af3b9ec9aac4652a291',1,'loader']]],
+  ['_7etext_5floader_33',['~text_loader',['../classtext__loader.html#a7a7a1d5da8429d3c4d7cc6eed4018c55',1,'text_loader']]]
 ];

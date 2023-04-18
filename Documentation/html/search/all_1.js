@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['get_5fnext_2',['get_next',['../classlist__element.html#a24fd1276e2ba13520dab9851f08ff95e',1,'list_element']]],
-  ['get_5fprev_3',['get_prev',['../classlist__element.html#ad3b2d7630d581bba72da6d3f17c54b36',1,'list_element']]],
-  ['get_5fvalue_4',['get_value',['../classlist__element.html#ace3c6890cdbbae0054ccf896a4104e34',1,'list_element']]]
+  ['load_2',['load',['../classbin__loader.html#a138d147cebfb5c36b5c07b9fe9ee0403',1,'bin_loader::load()'],['../classloader.html#abc557b575dd209caa54e1ad304ff132d',1,'loader::load()'],['../classtext__loader.html#acca23210e51fbc8873b7ea65b49b5782',1,'text_loader::load()']]],
+  ['loader_3',['loader',['../classloader.html',1,'loader'],['../classloader.html#af45d915d44f769fad43151df6236d4fc',1,'loader::loader()'],['../classloader.html#aecf0e8c4fb0a4a608b94586e2b29005a',1,'loader::loader(const string &amp;s)']]]
 ];

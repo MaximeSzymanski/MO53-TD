@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['_7ebin_5floader_31',['~bin_loader',['../classbin__loader.html#ac4f1ff1fd72a90e1c74cbfdd6b8af35f',1,'bin_loader']]],
-  ['_7eloader_32',['~loader',['../classloader.html#a3c97c3c48fcc1af3b9ec9aac4652a291',1,'loader']]],
-  ['_7etext_5floader_33',['~text_loader',['../classtext__loader.html#a7a7a1d5da8429d3c4d7cc6eed4018c55',1,'text_loader']]]
+  ['operator_3d_40',['operator=',['../classbin__writer.html#ad44b3bf1b3223e7f6ba1c53d24a406b5',1,'bin_writer::operator=()'],['../classtext__writer.html#a04cc57ae591d24612152876f4e9955ef',1,'text_writer::operator=()']]]
 ];

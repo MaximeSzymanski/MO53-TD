@@ -6,5 +6,5 @@ digraph "Graphical Class Hierarchy"
   rankdir="LR";
   Node5 [label="runtime_error",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
   Node5 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node0 [label="write_exception",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwrite__exception.html",tooltip=" "];
+  Node0 [label="write_exception",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwrite__exception.html",tooltip="Exception used by the descendants of the writer class when an error linked to writing occurs."];
 }

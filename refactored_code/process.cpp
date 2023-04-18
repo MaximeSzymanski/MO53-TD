@@ -14,6 +14,8 @@
 using namespace std;
 
 void process::choose_how_to_process() {
+    // The following code corresponds to step 1 of choose_how_to_to_process i.e
+    // 1) Ask the user which loader, storage type, calculation and writer they would like to use
     cout << "Which loader type would you like to use?\n(1) bin loader\n(2) text loader\n";
     int loader_choice = 0;
     while(loader_choice < 1 || loader_choice > 3) {
@@ -45,6 +47,8 @@ void process::choose_how_to_process() {
         cin >> destination_file;
     }
 
+    // The following code corresponds to step 2 of choose_how_to_to_process i.e
+    // 2) initialize the loader, storage type, calculation and writer according to the input from the user
     switch(loader_choice) {
         case 1: 
             _loader = make_shared<bin_loader>(bin_loader(source_file));
@@ -53,12 +57,13 @@ void process::choose_how_to_process() {
             _loader = make_shared<text_loader>(text_loader(source_file));
             break;
     }
-
+    // TODO: add linked_list
     switch(storage_type_choice) {
         case 1: 
             _storage = make_shared<vector>(vector());
             break;
     }
+    // TODO: add calculation
 
     switch(writer_choice) {
         case 1: 
@@ -75,11 +80,17 @@ void process::choose_how_to_process() {
 }
 
 void process::execute() {
+    /*
+    The function does the next steps:
+    1) Ask the user which loader, storage type, calculation and writer they would like to use<br>
+    2) initialize the loader, storage type, calculation and writer according to the input from the user<br>
+    */
     choose_how_to_process();
-
     try {
+        // load data
         storage_type& loaded_storage = _loader->load(*_storage);
         // TODO: calculate the loaded data
+        // write the calculated data
         _writer->write(loaded_storage);
     } catch(exception& e) {
         cerr << "\nAn exception was caught:\n" << e.what() << endl;

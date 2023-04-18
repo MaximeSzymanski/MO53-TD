@@ -2,7 +2,9 @@
 
 using namespace std;
 
-
+/**
+ * Entry point of the program
+*/
 int main() {
     process p{};
     p.execute();

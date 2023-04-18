@@ -74,20 +74,21 @@ $(function() {
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using namespace </span>std; </div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classscreen__writer.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="classscreen__writer.html">screen_writer</a>: <span class="keyword">public</span> <a class="code" href="classwriter.html">writer</a> {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <a class="code" href="classscreen__writer.html">screen_writer</a>() {};</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classscreen__writer.html">screen_writer</a>() {};</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> write(<a class="code" href="classstorage__type.html">storage_type</a>&amp; storage);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;};</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// SCREEN_WRITER_H</span></div>
-<div class="ttc" id="aclassscreen__writer_html"><div class="ttname"><a href="classscreen__writer.html">screen_writer</a></div><div class="ttdef"><b>Definition:</b> screen_writer.h:10</div></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classscreen__writer.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="classscreen__writer.html">screen_writer</a>: <span class="keyword">public</span> <a class="code" href="classwriter.html">writer</a> {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classscreen__writer.html#a134f16b82c79ce99c4b91c235d24252b">   21</a></span>&#160;        <a class="code" href="classscreen__writer.html#a134f16b82c79ce99c4b91c235d24252b">screen_writer</a>() {};</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classscreen__writer.html#a079e0112f7639dc7b4ba6626d168ca22">   25</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classscreen__writer.html#a079e0112f7639dc7b4ba6626d168ca22">~screen_writer</a>() {};</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> write(<a class="code" href="classstorage__type.html">storage_type</a>&amp; storage);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;};</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// SCREEN_WRITER_H</span></div>
+<div class="ttc" id="aclassscreen__writer_html"><div class="ttname"><a href="classscreen__writer.html">screen_writer</a></div><div class="ttdoc">screen_writer implements the writer class to write data in the console from a storage_type object</div><div class="ttdef"><b>Definition:</b> screen_writer.h:16</div></div>
+<div class="ttc" id="aclassscreen__writer_html_a079e0112f7639dc7b4ba6626d168ca22"><div class="ttname"><a href="classscreen__writer.html#a079e0112f7639dc7b4ba6626d168ca22">screen_writer::~screen_writer</a></div><div class="ttdeci">virtual ~screen_writer()</div><div class="ttdoc">destructor function</div><div class="ttdef"><b>Definition:</b> screen_writer.h:25</div></div>
+<div class="ttc" id="aclassscreen__writer_html_a134f16b82c79ce99c4b91c235d24252b"><div class="ttname"><a href="classscreen__writer.html#a134f16b82c79ce99c4b91c235d24252b">screen_writer::screen_writer</a></div><div class="ttdeci">screen_writer()</div><div class="ttdoc">default constructor</div><div class="ttdef"><b>Definition:</b> screen_writer.h:21</div></div>
 <div class="ttc" id="aclassstorage__type_html"><div class="ttname"><a href="classstorage__type.html">storage_type</a></div><div class="ttdef"><b>Definition:</b> storage_type.h:4</div></div>
-<div class="ttc" id="aclasswriter_html"><div class="ttname"><a href="classwriter.html">writer</a></div><div class="ttdef"><b>Definition:</b> writer.h:17</div></div>
+<div class="ttc" id="aclasswriter_html"><div class="ttname"><a href="classwriter.html">writer</a></div><div class="ttdoc">Writer is an abstract class used to write data from an object that inherits from storage_type.</div><div class="ttdef"><b>Definition:</b> writer.h:25</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

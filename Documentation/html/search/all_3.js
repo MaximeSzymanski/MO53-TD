@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['screen_5fwriter_5',['screen_writer',['../classscreen__writer.html',1,'']]],
-  ['source_6',['source',['../classloader.html#aa2515cd162366f8f8b452559ba8b8e77',1,'loader']]],
-  ['storage_5ftype_7',['storage_type',['../classstorage__type.html',1,'']]]
+  ['operator_3d_5',['operator=',['../classbin__writer.html#ad44b3bf1b3223e7f6ba1c53d24a406b5',1,'bin_writer::operator=()'],['../classtext__writer.html#a04cc57ae591d24612152876f4e9955ef',1,'text_writer::operator=()']]]
 ];

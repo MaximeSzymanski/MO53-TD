@@ -24,7 +24,7 @@ class loader {
         loader(): source("load.txt"){};
         /**
          * constructor used to set the the path to the source file
-         * @param s path for the source file used by the load function
+         * @param s path to the source file used by the load function
          * @see #load(storage_type&) 
         */
         loader(const string& s): source(s){};
@@ -34,8 +34,8 @@ class loader {
         virtual ~loader() {};
 
         /**
-         * Pure virtual function that returns a copy of storage with the double values contained in the source file
-         * Use this {@link #loader(const string&) loader constructor} to set the path to the source file
+         * Pure virtual function that returns a copy of storage with the double values contained in the source file.
+         * Use this {@link #loader(const string&) loader constructor} to set the path to the source file.
          * @param storage a copy of storage is returned with the values stored in the source file
          * @throws ios_base::failure if source can not be opened
          * @return a copy of storage with the values of the source file

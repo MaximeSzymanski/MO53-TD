@@ -31,9 +31,8 @@ class bin_loader: public loader {
         virtual ~bin_loader() {}
 
         /**
-         * Function that returns a copy of {@code storage} with the double values contained in the source binary file
+         * Function that returns a copy of storage with the double values contained in the source binary file
          * Use this {@link #bin_loader(const string&) bin_loader constructor} to set the path to the source file}
-         * @param storage storage that will store the values of source
          * @param storage a copy of storage is returned with the values stored in the source binary file
          * @throws ios_base::failure if source can not be opened
          * @return a copy of storage with the values of the source binary file

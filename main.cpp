@@ -1,5 +1,4 @@
 #include <iostream>
-#include "data_table.h"
 #include "data_list.h"
 
 using namespace std;

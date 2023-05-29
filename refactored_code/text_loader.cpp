@@ -20,7 +20,7 @@ storage_type& text_loader::load(storage_type& storage) {
     // store in returned_storage the data of f
     array<char, 100> buffer;
     while (f.getline(&buffer[0], 100)) {
-        returned_storage.add_element(stold(string{buffer.data()}));
+        returned_storage.push_back(stold(string{buffer.data()}));
     }
 
     return returned_storage;

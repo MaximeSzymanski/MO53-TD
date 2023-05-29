@@ -20,7 +20,7 @@ storage_type& bin_loader::load(storage_type& storage) {
     // store in returned_storage the data of f
     double buffer;
     while (f.read(reinterpret_cast<char *>(&buffer), sizeof(double))) {
-        returned_storage.add_element(buffer);
+        returned_storage.push_back(buffer);
     }
 
     return returned_storage;

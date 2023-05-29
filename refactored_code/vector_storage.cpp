@@ -5,7 +5,6 @@
 #include <algorithm>
 #include <functional>
 #include <stdexcept>
-#include <iostream>
 
 using namespace std;
 
@@ -84,7 +83,7 @@ double vector_storage::pop_element()
     return _data[_size--];
 }
 
-void vector_storage::sort_table(const bool ascending)
+void vector_storage::sort_storage(const bool ascending)
 {
     if (ascending)
     {

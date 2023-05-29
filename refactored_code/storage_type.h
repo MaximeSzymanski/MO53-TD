@@ -80,7 +80,7 @@ public:
     /**
      * Sorts the storage in ascending order.
      */
-    virtual void sort_table(const bool ascending) = 0;
+    virtual void sort_storage(const bool ascending) = 0;
 };
 
 #endif // STORAGE_TYPE_H

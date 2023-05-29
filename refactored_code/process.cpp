@@ -9,6 +9,7 @@
 #include "screen_writer.h"
 #include "text_writer.h"
 #include "bin_writer.h"
+#include "list_storage.h"
 #include <string>
 
 using namespace std;
@@ -28,10 +29,9 @@ void process::choose_how_to_process()
     string source_file;
     cin >> source_file;
 
-    // TODO: add the option to choose linked list
-    cout << "Which storage type would you like to use?\n(1) vector\n";
+    cout << "Which storage type would you like to use?\n(1) vector\n(2) linked list\n";
     int storage_type_choice = 0;
-    while (storage_type_choice != 1)
+    while (storage_type_choice < 1 || storage_type_choice > 2)
     {
         cin >> storage_type_choice;
     }
@@ -63,11 +63,14 @@ void process::choose_how_to_process()
         _loader = make_shared<text_loader>(text_loader(source_file));
         break;
     }
-    // TODO: add linked_list
+
     switch (storage_type_choice)
     {
     case 1:
         _storage = make_shared<vector_storage>(vector_storage());
+        break;
+    case 2:
+        _storage = make_shared<list_storage>(list_storage());
         break;
     }
     // TODO: add calculation

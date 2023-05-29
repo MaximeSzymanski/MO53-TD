@@ -5,7 +5,6 @@
 
 #include <list>
 #include <memory>
-#include <iostream>
 
 using namespace std;
 
@@ -95,7 +94,7 @@ public:
      *
      * @param ascending Whether to sort in ascending or descending order.
      */
-    virtual void sort_table(const bool ascending);
+    virtual void sort_storage(const bool ascending);
 
     /**
      * Removes the last element and returns its value

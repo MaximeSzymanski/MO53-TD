@@ -14,6 +14,8 @@
 #include "calculation.h"
 #include "moving_average.h"
 #include "storage_sum.h"
+#include "storage_average.h"
+#include "storage_count.h"
 
 using namespace std;
 
@@ -39,10 +41,9 @@ void process::choose_how_to_process()
         cin >> storage_type_choice;
     }
 
-    // TODO: add calculation choice
-    cout << "What calculation function would you like to use?\n(1) Move average\n(2) Storage sum\n";
+    cout << "What calculation function would you like to use?\n(1) Move average\n(2) Storage sum\n(3) Storage average\n(4) Storage count\n";
     int calculation_type_choice = 0;
-    while (calculation_type_choice < 1 || calculation_type_choice > 2)
+    while (calculation_type_choice < 1 || calculation_type_choice > 4)
     {
         cin >> calculation_type_choice;
     }
@@ -93,7 +94,6 @@ void process::choose_how_to_process()
         break;
     }
 
-    // TODO: add calculation
     switch (calculation_type_choice)
     {
     case 1:
@@ -101,6 +101,12 @@ void process::choose_how_to_process()
         break;
     case 2:
         _calculation = make_shared<storage_sum>(storage_sum());
+        break;
+    case 3:
+        _calculation = make_shared<storage_average>(storage_average());
+        break;
+    case 4:
+        _calculation = make_shared<storage_count>(storage_count());
         break;
     }
 
@@ -130,7 +136,7 @@ void process::execute()
     {
         // load data
         storage_type &loaded_storage = _loader->load(*_storage);
-        // Calculate data using the loaded data
+        // Calculate data
         _calculation->calculate(loaded_storage);
         // write the calculated data
         _writer->write(loaded_storage);

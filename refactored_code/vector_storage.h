@@ -75,7 +75,7 @@ public:
      * @return The element at the specified position.
      * @throws out_of_range if the position is outside the bounds of the storage
      */
-    virtual double get_element(const int position);
+    virtual double get_element(const int position) const;
 
     /**
      * This function clears the vector, removing all of the elements.
@@ -87,7 +87,7 @@ public:
      *
      * @return The size of the vector.
      */
-    virtual int size();
+    virtual int size() const;
 
     /**
      * This function sorts the vector in ascending order.

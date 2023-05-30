@@ -47,7 +47,7 @@ void vector_storage::push_back(const double d)
     _data[_size++] = d;
 }
 
-double vector_storage::get_element(const int position)
+double vector_storage::get_element(const int position) const
 {
     // Check if the index is valid.
     if (position < 0 || position >= _capacity_data)
@@ -66,7 +66,7 @@ void vector_storage::clear()
     _size = 0;
 }
 
-int vector_storage::size()
+int vector_storage::size() const
 {
     return _size;
 }

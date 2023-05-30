@@ -71,7 +71,7 @@ double list_storage::pop_element()
     return return_value;
 }
 
-int list_storage::size()
+int list_storage::size() const
 {
     size_t s = 0;
     shared_ptr<list_element> ptr = _head;
@@ -83,7 +83,7 @@ int list_storage::size()
     return s;
 }
 
-double list_storage::get_element(int position)
+double list_storage::get_element(int position) const
 {
     size_t pos = 0;
     shared_ptr<list_element> ptr = _head;

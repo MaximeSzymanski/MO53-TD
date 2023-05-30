@@ -11,6 +11,8 @@
 #include "bin_writer.h"
 #include "list_storage.h"
 #include <string>
+#include "calculation.h"
+#include "moving_average.h"
 
 using namespace std;
 
@@ -37,6 +39,22 @@ void process::choose_how_to_process()
     }
 
     // TODO: add calculation choice
+    cout << "What calculation function would you like to use?\n(1) Move average\n";
+    int calculation_type_choice = 0;
+    while (calculation_type_choice < 1 || calculation_type_choice > 1)
+    {
+        cin >> calculation_type_choice;
+    }
+
+    int moving_average_window_width = 0;
+    if (calculation_type_choice == 1)
+    {
+        cout << "What window width would you like for the moving average window?\n";
+        while (moving_average_window_width <= 0)
+        {
+            cin >> moving_average_window_width;
+        }
+    }
 
     cout << "Which writer type would you like to use?\n(1) binary writer\n(2) text writer\n(3) screen writer\n";
     int writer_choice = 0;
@@ -73,7 +91,17 @@ void process::choose_how_to_process()
         _storage = make_shared<list_storage>(list_storage());
         break;
     }
+
     // TODO: add calculation
+    switch (calculation_type_choice)
+    {
+    case 1:
+        _calculation = make_shared<moving_average>(moving_average(moving_average_window_width));
+        break;
+    case 2:
+        _storage = make_shared<list_storage>(list_storage());
+        break;
+    }
 
     switch (writer_choice)
     {
@@ -101,7 +129,8 @@ void process::execute()
     {
         // load data
         storage_type &loaded_storage = _loader->load(*_storage);
-        // TODO: calculate the loaded data
+        // Calculate data using the loaded data
+        _calculation->calculate(loaded_storage);
         // write the calculated data
         _writer->write(loaded_storage);
     }

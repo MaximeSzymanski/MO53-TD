@@ -9,6 +9,7 @@
 #include "writer.h"
 #include "vector_storage.h"
 #include "screen_writer.h"
+#include "calculation.h"
 
 using namespace std;
 
@@ -19,21 +20,26 @@ class process
 {
 private:
     /**
-     * loader object used by {@link #execute() execute}
+     * loader object used
      */
     shared_ptr<loader> _loader;
     /**
-     * storage_type object used by {@link #execute() execute}
+     * storage_type object
      */
     shared_ptr<storage_type> _storage;
     /**
-     * writer object used by {@link #execute() execute}
+     * Calculate object
+     */
+    shared_ptr<calculation> _calculation;
+
+    /**
+     * writer object
      */
     shared_ptr<writer> _writer;
 
 public:
     /**
-     * defualt constructor that initializes the private attributes of the class
+     * default constructor that initializes the private attributes of the class
      */
     process() : _loader(make_shared<bin_loader>(bin_loader())), _storage(make_shared<vector_storage>(vector_storage())), _writer(make_shared<screen_writer>(screen_writer())){};
     /**
@@ -46,7 +52,7 @@ public:
      * 2) initializing the loader, storage type, calculation and writer according to the input from the user<br>
      * 3) loading the data<br>
      * 4) calculating data<br>
-     * 5) outputing the calculated data
+     * 5) outputting the calculated data
      */
     virtual void execute();
 

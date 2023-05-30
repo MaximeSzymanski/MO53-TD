@@ -137,7 +137,7 @@ public:
      * @return The element at the specified position
      * @throws out_of_range if the position is outside the bounds of the storage
      */
-    virtual double get_element(const int position);
+    virtual double get_element(const int position) const;
 
     /**
      * Removes the last element and returns its value
@@ -157,7 +157,7 @@ public:
      *
      * @return The size of the storage
      */
-    virtual int size();
+    virtual int size() const;
 
     /**
      * Sorts the storage in ascending order.

@@ -10,12 +10,12 @@ class calculation
 {
 public:
     /**
-     * Calculates the result of the calculation.
+     * Calculates a result from the data stored in `storage`.
+     * The result replaces the data stored in `storage`.
      *
      * @param storage The input data.
-     * @return new storage_type object that contains the result of the calculation
      */
-    virtual storage_type calculate(const storage_type &storage) = 0;
+    virtual void calculate(storage_type &storage) = 0;
 };
 
 #endif // CALCULATION_H

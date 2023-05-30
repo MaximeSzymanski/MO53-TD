@@ -32,7 +32,7 @@ void list_storage::clear()
         _head = tmp->get_next();
         tmp = _head;
     }
-    _head = _tail = make_shared<list_element>();
+    _head = _tail = nullptr;
 }
 
 void list_storage::push_back(double v)

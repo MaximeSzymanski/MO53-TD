@@ -13,6 +13,7 @@
 #include <string>
 #include "calculation.h"
 #include "moving_average.h"
+#include "storage_sum.h"
 
 using namespace std;
 
@@ -39,9 +40,9 @@ void process::choose_how_to_process()
     }
 
     // TODO: add calculation choice
-    cout << "What calculation function would you like to use?\n(1) Move average\n";
+    cout << "What calculation function would you like to use?\n(1) Move average\n(2) Storage sum\n";
     int calculation_type_choice = 0;
-    while (calculation_type_choice < 1 || calculation_type_choice > 1)
+    while (calculation_type_choice < 1 || calculation_type_choice > 2)
     {
         cin >> calculation_type_choice;
     }
@@ -99,7 +100,7 @@ void process::choose_how_to_process()
         _calculation = make_shared<moving_average>(moving_average(moving_average_window_width));
         break;
     case 2:
-        _storage = make_shared<list_storage>(list_storage());
+        _calculation = make_shared<storage_sum>(storage_sum());
         break;
     }
 

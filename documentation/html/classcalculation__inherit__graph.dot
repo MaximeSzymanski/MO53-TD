@@ -1,0 +1,15 @@
+digraph "calculation"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="calculation",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="The calculation class represents a generic calculation."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="moving_average",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classmoving__average.html",tooltip="The moving_average class calculates the moving average of data."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="storage_average",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstorage__average.html",tooltip="The storage_average class calculates the average of data."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="storage_count",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstorage__count.html",tooltip="The storage_count class counts the amount of data members stored in a storage_type object."];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="storage_sum",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstorage__sum.html",tooltip="The storage_sum class calculates the sum of data."];
+}

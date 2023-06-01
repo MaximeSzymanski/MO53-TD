@@ -1,5 +1,7 @@
 #include "resource_manager.h"
 
+#include <memory>
+
 #include "loader.h"
 #include "text_loader.h"
 #include "bin_loader.h"
@@ -22,77 +24,53 @@
 
 using namespace std;
 
-
-loader* Resource_manager::make_loader(shared_enum::input input){
-    switch (input)
-    {
-    case  shared_enum::input::BIN:
-        break;
-    case  shared_enum::input::TEXT:
-        break;
-    default:
-        return nullptr;
-        break;
+std::shared_ptr<loader> Resource_manager::make_loader(shared_enum::input input) {
+    switch (input) {
+        case shared_enum::input::BIN:
+            return make_shared<bin_loader>();
+        case shared_enum::input::TEXT:
+            return make_shared<text_loader>();
+        default:
+            return nullptr;
     }
 }
 
-storage_type* Resource_manager::make_storage(shared_enum::storage storage){
-    switch (storage)
-    {
-    case shared_enum::storage::LIST :
-        return new list_storage();
-        break;
-    case shared_enum::storage::VECTOR :
-        return new vector_storage();
-        break;
-    default:
-        return nullptr;
-        break;
+shared_ptr<storage_type> Resource_manager::make_storage(shared_enum::storage storage) {
+    switch (storage) {
+        case shared_enum::storage::LIST:
+            return make_shared<list_storage>();
+        case shared_enum::storage::VECTOR:
+            return make_shared<vector_storage>();
+        default:
+            return nullptr;
     }
 }
 
-
-writer* Resource_manager::make_writer(shared_enum::output output){
-    switch (output)
-    {
-    case shared_enum::output::BIN :
-        return new bin_writer();
-        break;
-    case shared_enum::output::SCREEN :
-        return new screen_writer();
-        break;
-    case shared_enum::output::TEXT :
-        return new text_writer();
-        break;
-
-    default:
-        return nullptr;
-        break;
+shared_ptr<writer> Resource_manager::make_writer(shared_enum::output output) {
+    switch (output) {
+        case shared_enum::output::BIN:
+            return make_shared<bin_writer>();
+        case shared_enum::output::SCREEN:
+            return make_shared<screen_writer>();
+        case shared_enum::output::TEXT:
+            return make_shared<text_writer>();
+        default:
+            return nullptr;
     }
 }
 
-calculation* Resource_manager::make_calculation(shared_enum::calculation calculation, int window_width = 0){
- switch (calculation)
-    {
-    case shared_enum::calculation::AVG :
-        return new storage_average();
-        break;
-    case shared_enum::calculation::COUNT :
-        return new storage_count();
-        break;
-    case shared_enum::calculation::MOVING_AVG :
-        if(window_width > 0)
-            return new moving_average(window_width);
-        break;
-    case shared_enum::calculation::SORT :
-        /* code */
-        break;
-    case shared_enum::calculation::SUM :
-        return new storage_sum();
-        break;
-
-    default:
-        return nullptr;
-        break;
+shared_ptr<calculation> Resource_manager::make_calculation(shared_enum::calculation calculation, int window_width) {
+    switch (calculation) {
+        case shared_enum::calculation::AVG:
+            return make_shared<storage_average>();
+        case shared_enum::calculation::COUNT:
+            return make_shared<storage_count>();
+        case shared_enum::calculation::MOVING_AVG:
+            if (window_width > 0)
+                return make_shared<moving_average>(window_width);
+        case shared_enum::calculation::SUM:
+            return make_shared<storage_sum>();
+        default:
+            return nullptr;
     }
 }

@@ -123,7 +123,7 @@ int main()
         mgr.make_loader(input_type, source_file),
         mgr.make_storage(storage_type),
         mgr.make_calculation(calculation_type, moving_average_window_width),
-        mgr.make_writer(output_type)};
+        mgr.make_writer(output_type, destination_file)};
 
     // execute the process
     p.execute();

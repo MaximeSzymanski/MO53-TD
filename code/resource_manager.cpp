@@ -50,16 +50,16 @@ shared_ptr<storage_type> resource_manager::make_storage(shared_enum::storage sto
     }
 }
 
-shared_ptr<writer> resource_manager::make_writer(shared_enum::output output)
+shared_ptr<writer> resource_manager::make_writer(shared_enum::output output, string output_file)
 {
     switch (output)
     {
     case shared_enum::output::OUTPUT_BIN:
-        return make_shared<bin_writer>();
+        return make_shared<bin_writer>(output_file);
     case shared_enum::output::OUTPUT_SCREEN:
         return make_shared<screen_writer>();
     case shared_enum::output::OUTPUT_TEXT:
-        return make_shared<text_writer>();
+        return make_shared<text_writer>(output_file);
     default:
         return nullptr;
     }

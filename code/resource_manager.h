@@ -35,9 +35,10 @@ public:
      * Creates a writer object based on the specified output type.
      *
      * @param output The output type to create the writer for.
+     * @param output_file file to write the output (only used for shared_enum::output::OUTPUT_TXT and shared_enum::output::OUTPUT_BIN)
      * @return A shared pointer to the newly created writer object.
      */
-    static std::shared_ptr<writer> make_writer(shared_enum::output);
+    static std::shared_ptr<writer> make_writer(shared_enum::output, std::string output_file = "output.txt");
 
     /**
      * Creates a calculation object based on the specified calculation type and window width.

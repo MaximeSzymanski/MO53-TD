@@ -39,30 +39,26 @@ private:
 
 public:
     /**
-     * default constructor that initializes the private attributes of the class
+     * Constructor of a process
+     * @param loader loads data
+     * @param storage stores the data during the process
+     * @param calculation applies a calculation function on the loaded data
+     * @param writer writes the results of calculation
      */
-    process() : _loader(make_shared<bin_loader>(bin_loader())), _storage(make_shared<vector_storage>(vector_storage())), _writer(make_shared<screen_writer>(screen_writer())){};
+    process(shared_ptr<loader> loader, shared_ptr<storage_type> storage, shared_ptr<calculation> calculation, shared_ptr<writer> writer) : _loader(loader), _storage(storage), _calculation(calculation), _writer(writer) {}
+
     /**
      * destructor function
      */
     virtual ~process(){};
     /**
      * This function processes data by:<br>
-     * 1) Asking the user which loader, storage type, calculation and writer they would like to use<br>
-     * 2) initializing the loader, storage type, calculation and writer according to the input from the user<br>
-     * 3) loading the data<br>
-     * 4) calculating data<br>
-     * 5) outputting the calculated data
+     * 1) loading data by using a loader object into a storage_type object <br>
+     * 2) calculating a result by using a calculation object and the loaded data <br>
+     * 3) writing the result by using a writer object<br>
+     * The objects used to process the data are given in the constructor of the process class.
      */
     virtual void execute();
-
-private:
-    /**
-     * This function takes care of step 1 and 2 of the {@link #execute() execute function} i.e:
-     * 1) Asking the user which loader, storage type, calculation and writer they would like to use<br>
-     * 2) initializing the loader, storage type, calculation and writer according to the input from the user
-     */
-    virtual void choose_how_to_process();
 };
 
 #endif // PROCESS_H

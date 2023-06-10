@@ -120,4 +120,28 @@ void list_storage::sort_storage(bool ascending)
         min_element->set_value(tmp);
         ptr = ptr->get_next();
     }
+    
+}
+
+ListIterator list_storage::begin()
+{
+    return ListIterator(_head);
+}
+
+ListIterator list_storage::end()
+{
+    return ListIterator(_tail);
+}
+
+double list_storage::operator[](int position)
+{
+    try
+    {
+        return get_element(position);
+    }
+    catch(const std::out_of_range& e)
+    {
+        throw e;
+    }
+    
 }

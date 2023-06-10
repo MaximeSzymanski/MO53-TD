@@ -79,6 +79,85 @@ public:
 };
 
 /**
+ * @class ListIterator
+ * @brief Iterator for traversing elements of a linked list.
+ *
+ * The `ListIterator` class allows iteration over the elements of a linked list.
+ * It is used in conjunction with the `list_storage` class to iterate through the stored elements in the list.
+ */
+class ListIterator
+{
+public:
+
+    /**
+     * Constructor of the `ListIterator` class.
+     *
+     * @param ptr A `shared_ptr` pointing to a list element.
+     */
+    ListIterator(shared_ptr<list_element> ptr) : _ptr(ptr) {}
+
+     /**
+     * Dereference operator.
+     *
+     * Retrieves the value of the current element pointed by the iterator.
+     *
+     * @return A constant reference to the value of the current element.
+     */
+    const double &operator*() const { return _ptr->get_value(); }
+
+    /**
+     * Pre-increment operator.
+     *
+     * Moves the iterator to the next element in the list.
+     *
+     * @return A reference to the iterator after the increment.
+     */
+    ListIterator &operator++()
+    {
+        _ptr = _ptr->get_next();
+        return *this;
+    }
+
+    /**
+     * Post-increment operator.
+     *
+     * Moves the iterator to the next element in the list.
+     *
+     * @return A copy of the iterator before the increment.
+     */
+    ListIterator operator++(int)
+    {
+        ListIterator tmp(*this);
+        operator++();
+        return tmp;
+    }
+
+    /**
+     * Equality operator.
+     *
+     * @param other The iterator to be compared with.
+     * @return `true` if the iterators point to the same element, `false` otherwise.
+     */
+    bool operator==(const ListIterator &other) const { return _ptr == other._ptr; }
+
+    /**
+     * Inequality operator.
+     *
+     * @param other The iterator to be compared with.
+     * @return `true` if the iterators point to different elements, `false` otherwise.
+     */
+    bool operator!=(const ListIterator &other) const { return _ptr != other._ptr; }
+
+private:
+    /**
+     * A `shared_ptr` pointing to a list element.
+     */
+    shared_ptr<list_element> _ptr;
+};
+
+
+
+/**
  * This class provides a way to store doubles by inheriting from storage_type.
  * The class stores the doubles in list_element objects
  * @see list_element
@@ -163,6 +242,13 @@ public:
      * Sorts the storage in ascending order.
      */
     virtual void sort_storage(const bool ascending);
+
+    ListIterator begin();
+
+    ListIterator end();
+
+    double operator[](int position);
+
 };
 
 #endif // LIST_STORAGE_H

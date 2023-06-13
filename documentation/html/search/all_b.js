@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['write_33',['write',['../classbin__writer.html#a273f9b130b0a897dc39448a29344af12',1,'bin_writer::write()'],['../classscreen__writer.html#aacf38cb88e71d023fbd56e10c05a1516',1,'screen_writer::write()'],['../classtext__writer.html#a1293a833a8d3704448667440aeb2a8e2',1,'text_writer::write()'],['../classwriter.html#aaf3ecba7e4c533bc48cd9e8489d4b71d',1,'writer::write()']]],
-  ['write_5fexception_34',['write_exception',['../classwrite__exception.html',1,'']]],
-  ['writer_35',['writer',['../classwriter.html',1,'writer'],['../classwriter.html#a311f0257da943ab6e9094edb47afa371',1,'writer::writer()']]]
+  ['vector_5fstorage_42',['vector_storage',['../classvector__storage.html',1,'vector_storage'],['../classvector__storage.html#aedbc486fd31391d4bd397653d34ede8a',1,'vector_storage::vector_storage()'],['../classvector__storage.html#a88313e2d03a4b73fbaf31bb9c7db6c46',1,'vector_storage::vector_storage(const vector_storage &amp;vector_storage)']]]
 ];

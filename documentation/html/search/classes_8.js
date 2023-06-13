@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['write_5fexception_64',['write_exception',['../classwrite__exception.html',1,'']]],
-  ['writer_65',['writer',['../classwriter.html',1,'']]]
+  ['vector_5fstorage_75',['vector_storage',['../classvector__storage.html',1,'']]]
 ];

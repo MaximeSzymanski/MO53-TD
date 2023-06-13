@@ -1,15 +1,6 @@
 var searchData=
 [
-  ['_7ebin_5floader_36',['~bin_loader',['../classbin__loader.html#ac4f1ff1fd72a90e1c74cbfdd6b8af35f',1,'bin_loader']]],
-  ['_7ebin_5fwriter_37',['~bin_writer',['../classbin__writer.html#a5144dcfa0327af056190c747bde4eaf4',1,'bin_writer']]],
-  ['_7elist_5felement_38',['~list_element',['../classlist__element.html#a3cf691d87a11e0e82a92bc7018fffe10',1,'list_element']]],
-  ['_7elist_5fstorage_39',['~list_storage',['../classlist__storage.html#a9265e247a9ae3b94dbdcf59fab577d80',1,'list_storage']]],
-  ['_7eloader_40',['~loader',['../classloader.html#a3c97c3c48fcc1af3b9ec9aac4652a291',1,'loader']]],
-  ['_7eprocess_41',['~process',['../classprocess.html#a3a73b106d9d98686929f52c45e456f17',1,'process']]],
-  ['_7escreen_5fwriter_42',['~screen_writer',['../classscreen__writer.html#a079e0112f7639dc7b4ba6626d168ca22',1,'screen_writer']]],
-  ['_7estorage_5ftype_43',['~storage_type',['../classstorage__type.html#aa959cc12a6410d04e42627d5f61f0259',1,'storage_type']]],
-  ['_7etext_5floader_44',['~text_loader',['../classtext__loader.html#a7a7a1d5da8429d3c4d7cc6eed4018c55',1,'text_loader']]],
-  ['_7etext_5fwriter_45',['~text_writer',['../classtext__writer.html#a9c6775010a78980fbfa67c94e0da2fed',1,'text_writer']]],
-  ['_7evector_5fstorage_46',['~vector_storage',['../classvector__storage.html#a4aaadffe99bca1b10ef703f0bee64941',1,'vector_storage']]],
-  ['_7ewriter_47',['~writer',['../classwriter.html#a9c19676436fe0146a82e092c86c5d030',1,'writer']]]
+  ['write_43',['write',['../classbin__writer.html#a273f9b130b0a897dc39448a29344af12',1,'bin_writer::write()'],['../classscreen__writer.html#aacf38cb88e71d023fbd56e10c05a1516',1,'screen_writer::write()'],['../classtext__writer.html#a1293a833a8d3704448667440aeb2a8e2',1,'text_writer::write()'],['../classwriter.html#aaf3ecba7e4c533bc48cd9e8489d4b71d',1,'writer::write()']]],
+  ['write_5fexception_44',['write_exception',['../classwrite__exception.html',1,'']]],
+  ['writer_45',['writer',['../classwriter.html',1,'writer'],['../classwriter.html#a311f0257da943ab6e9094edb47afa371',1,'writer::writer()']]]
 ];
